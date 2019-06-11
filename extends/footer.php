@@ -1,3 +1,4 @@
+</div></div></div>
 <!-- script firebase -->
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
@@ -12,10 +13,10 @@
 <script src="../assets/js/admin.js"></script>
 
 <!--Librerias diseño -->
-<script src="../assets/js/core/jquery.min.js"></script>
 <script src="../assets/js/core/popper.min.js">
 <script src="../assets/js/material-dashboard.js"></script>
 <script src="../assets/js/plugins/moment.min.js"></script>
 <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+
 </body>
 </html>
