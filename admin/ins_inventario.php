@@ -48,11 +48,11 @@
             $ins->bindParam(':descripcion', $descripcion);
             $ins->bindParam(':foto', $copia);
 
-            if($ins->execute()){
-                echo "<script>jQuery(function(){swal('Exito!', 'Datos guardados correctamente', 'success');});</script>";
+            if($ins->execute()){                
                 $ins = null;
                 $conn = null;
                 header('Location: admin.php');
+                echo "<script>jQuery(function(){swal('Exito!', 'Los datos se guardaron correctamente!', 'success');});</script>";
             }else{
                 echo "<script>jQuery(function(){swal('Error!', 'Lo siento, hubo un error', 'error');});</script>";
                 header('Location: admin.php');
@@ -62,7 +62,6 @@
         echo "<script>jQuery(function(){swal('Error!', 'Lo siento, hubo un error', 'error');});</script>";
         header('Location: admin.php');
     }
-
-
+    
     include '../extends/footer.php';
 ?>

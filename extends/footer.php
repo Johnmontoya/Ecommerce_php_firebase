@@ -13,10 +13,11 @@
 <script src="../assets/js/admin.js"></script>
 
 <!--Librerias diseño -->
-<script src="../assets/js/core/popper.min.js">
-<script src="../assets/js/material-dashboard.js"></script>
-<script src="../assets/js/plugins/moment.min.js"></script>
+<script src="../assets/js/core/popper.min.js"></script>
+<script src="../assets/js/core/bootstrap-material-design.min.js"></script>
 <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+<script src="../assets/js/plugins/moment.min.js"></script>
+<script src="../assets/js/material-dashboard.js?v=2.1.1"></script>
 
 </body>
 </html>
