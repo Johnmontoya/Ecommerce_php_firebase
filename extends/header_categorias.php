@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php include '../database/conexion.php';
+<?php include '../../database/conexion.php';
 ob_start(); ?>
 <html lang="en">
 <head>
@@ -9,12 +9,12 @@ ob_start(); ?>
     <title>Ecommerce</title>
     <link rel="stylesheet" type="text/css"
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-    <link rel="stylesheet" href="../assets/css/material-dashboard.css?v=2.1.1">
+    <link rel="stylesheet" href="../../assets/css/material-dashboard.css?v=2.1.1">
     
 
-    <script src="../assets/js/core/jquery.min.js"></script>
+    <script src="../../assets/js/core/jquery.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 
 <body>
@@ -33,7 +33,7 @@ ob_start(); ?>
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item active  ">
-            <a class="nav-link" href="admin.php">
+            <a class="nav-link" href="../admin.php">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
@@ -81,7 +81,7 @@ ob_start(); ?>
             </a>
           </li>
           <li class="nav-item active-pro ">
-            <a class="nav-link" href="libros/libros.php">
+            <a class="nav-link" href="libros.php">
               <i class="material-icons">library_books</i>
               <p>Libros</p>
             </a>

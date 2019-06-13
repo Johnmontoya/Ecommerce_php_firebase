@@ -129,6 +129,8 @@
                                         <td><a href="agregar_imagenes.php?clave=<?php echo $value['clave']; ?>"
                                                 class="btn btn-outline-success btn-sm"><span
                                                     class="material-icons">add</span></a></td>
+                                        <td><a href="editar_imagenes.php?clave=<?php echo $value['clave']; ?>" class="btn btn-outline-primary btn-sm"><span class="material-icons">edit</span></a></td>
+                                        <td><a href="eliminar_inventario.php?clave=<?php echo $value['clave']; ?>&foto=<?php echo $value['foto']; ?>" class="btn btn-outline-danger btn-sm"><span class="material-icons">delete</span></a></td>
                                     </tr>
                                     <?php } 
                                       $sel = null;
