@@ -1,4 +1,5 @@
-<?php include '../extends/header.php' ?>
+<?php include '../extends/header.php'; ?>
+
 <div class="content">
     <div class="container-fluid">
         <div class="row">
@@ -38,11 +39,12 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <div class="custom-file">
-                                            <input type="file" class="custom-file-input" name="imagen"
-                                                id="customFileLang" lang="es">
-                                            <label class="custom-file-label" for="customFileLang">Seleccionar
-                                                Archivo</label>
+                                        <div class="file-upload">
+                                            <div class="file-select">
+                                                <div class="file-select-button" id="fileName">Seleccionar</div>
+                                                <div class="file-select-name" id="noFile">No hay archivos</div>
+                                                <input type="file" name="imagen" id="imagen">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -72,8 +74,7 @@
                                             class="form-control" required></textarea>
                                     </div>
                                 </div>
-                            </div>
-
+                            </div>                            
                             <button id="saveProducto" type="submit" class="btn btn-info">Guardar</button>
                         </form>
                     </div>
@@ -118,14 +119,17 @@
                                       $sel = $conn->prepare("SELECT * FROM inventario ORDER BY id DESC LIMIT 1");
                                       $sel->execute();
                                       foreach ($sel as $key => $value) { ?>
-                                        <tr>
-                                          <td><img src="<?php echo $value['foto']; ?>" width="60" height="60"></td>
-                                          <td><?php echo $value['producto']; ?></td>
-                                          <td><?php echo $value['cantidad']; ?></td>
-                                          <td><?php echo $value['precio']; ?></td>
-                                          <td><?php echo $value['categoria'] ;?></td>
-                                          <td><?php echo substr($value['descripcion'], 0, 100); ?>...</td>
-                                        </tr>
+                                    <tr>
+                                        <td><img src="<?php echo $value['foto']; ?>" width="60" height="60"></td>
+                                        <td><?php echo $value['producto']; ?></td>
+                                        <td><?php echo $value['cantidad']; ?></td>
+                                        <td><?php echo $value['precio']; ?></td>
+                                        <td><?php echo $value['categoria'] ;?></td>
+                                        <td><?php echo substr($value['descripcion'], 0, 100); ?>...</td>
+                                        <td><a href="agregar_imagenes.php?clave=<?php echo $value['clave']; ?>"
+                                                class="btn btn-outline-success btn-sm"><span
+                                                    class="material-icons">add</span></a></td>
+                                    </tr>
                                     <?php } 
                                       $sel = null;
                                       $conn = null;

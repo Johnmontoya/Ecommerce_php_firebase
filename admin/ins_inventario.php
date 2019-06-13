@@ -1,5 +1,5 @@
 <?php
-    include '../extends/header.php';
+    include '../extends/header.php';    
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $clave = sha1(rand(0000,9999).rand(00,99));
@@ -51,8 +51,8 @@
             if($ins->execute()){                
                 $ins = null;
                 $conn = null;
-                header('Location: admin.php');
                 echo "<script>jQuery(function(){swal('Exito!', 'Los datos se guardaron correctamente!', 'success');});</script>";
+                header('Location: admin.php');
             }else{
                 echo "<script>jQuery(function(){swal('Error!', 'Lo siento, hubo un error', 'error');});</script>";
                 header('Location: admin.php');
